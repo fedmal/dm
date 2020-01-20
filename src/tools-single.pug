@@ -1,0 +1,391 @@
+extends pug/base
+
+append vars
+	-
+		var body = {
+			classList: ["main-page"]
+		}
+
+		var products = [
+			{
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+
+		var products_courses = [
+			{
+				title: 'The Complete Digital Marketing Course - 12 Courses in 1',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				title: 'Viewst',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'HubSpot',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+
+		var products_services = [
+			{
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: true,
+			},
+			{
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+		
+
+
+block content
+	.main-wrap
+		.site__layer
+		include pug/header
+		a(href="#").compare-fixed
+			.compare-fixed__text
+				| COMPARE 
+			span.badge-num
+				| 321
+		.hero.hero_single.heading-bg
+			.container
+				.hero__inner.clearfix
+					.hero-search.hero-search_single
+						.hero-search__input
+							input.form-control(placeholder="e.g. SEO or Email Marketing")
+						.hero-search__append
+							button.btn.btn-green.hero-search__btn
+								i.icon.icon-search
+								| SEARCH
+		
+		.single-heading
+			.container
+				.single-heading__inner
+					.single-heading__back
+						a(href="#").btn.btn-blue-light.bdrs-5.btn-back
+							i.icon.icon-triangle-back
+							| Back
+					h1.single-heading__title.text-xl
+						| The Complete Digital Marketing Tool All in One
+					p
+						| Social Media Marketing, Email Marketing 
+
+
+		.product-container
+			.container
+				.product
+					.row
+						.col-lg-5
+							.product__left
+								.product-box-detail
+									.product-box-detail__image
+										img(src="images/single-detail.jpg", alt="")
+									.product-box-detail__info
+										h2.text-md.product-box-detail__title
+											| The Complete Digital Marketing Tool All in One
+										.product-box-detail__price
+											| from 
+											span
+												| £200
+										.product-box-detail__btns
+											a(href="#").btn.btn-orange.btn-block.btn-lg
+												| FREE TRIAL
+											ul.row.product-box-detail__btns__row
+												li.col
+													a.btn.btn-green.btn-block.btn-lg(href="#")
+														| Visit Website
+												li.col
+													a.btn.btn-outline-blue-light.btn-block.btn-lg(href="#")
+														| Compare
+
+										.share.product-box-detail__share
+												.share-label
+													i.icon.icon-share
+													span
+														| Share
+												.share-soc
+													ul.share-soc-list
+														li
+															a(href="#")
+																i.icon.fa.fa-twitter
+														li
+															a(href="#")
+																i.icon.fa.fa-facebook
+														li
+															a(href="#")
+																i.icon.fa.fa-envelope
+
+								.row
+									.col-lg-6
+										.product-content
+											h2.text-md.product-content__title
+												| Features
+
+											ul.product-marker-list
+												li 
+													a(href="#") Unlimited searches
+												li 
+													a(href="#") For high-performing
+												li 
+													a(href="#") Content in your field
+												li 
+													a(href="#") Create targeted content
+
+									.col-lg-6
+										.product-content
+											h2.text-md.product-content__title
+												| Price Options
+											ul.product-marker-list
+												li 
+													span
+														| Monthly Subscription
+												li 
+													span
+														| Annual Subscription
+												li 
+													span
+														| Free Trial
+
+
+						.col-lg-7
+							.product__right
+								.product-info
+									.product-content
+										h2.text-md.product-content__title
+											| Description
+
+										p
+											| Praesent pretium rutrum orci, non tincidunt quam condimentum in. Ut congue suscipit dolor, quis aliquam magna. 
+											| Quisque sed est venenatis est dignissim lacinia non vitae dui. Nullam cursus, lacus et consectetur interdum, 
+											| elit lorem egestas erat, non consectetur lectus tortor nec purus. Morbi sed libero et tortor tristique pellentesque.
+											|  Sed sagittis enim eget accumsan efficitur. Suspendisse ut pharetra nibh, eget tempor magna. Donec cras amet.
+
+										p
+											| Praesent pretium rutrum orci, non tincidunt quam condimentum in. Ut congue suscipit dolor, quis aliquam magna. 
+											| Quisque sed est venenatis est dignissim lacinia non vitae dui. Nullam cursus, lacus et consectetur interdum, 
+											| elit lorem egestas erat, non consectetur lectus tortor nec purus. Morbi sed libero et tortor tristique pellentesque.
+											|  Sed sagittis enim eget accumsan efficitur. Suspendisse ut pharetra nibh, eget tempor magna. Donec cras amet.
+
+									.product-content.product-brand
+										h2.text-md.product-content__title
+											| Used by Companies
+										ul.product-brand__list
+											li
+												span
+													img(src="images/product-brands/ico-1.png", srcset="images/product-brands/ico-1@2x.png 2x" alt="")
+											li
+												span
+													img(src="images/product-brands/ico-2.png", srcset="images/product-brands/ico-2@2x.png 2x" alt="")
+											li
+												span
+													img(src="images/product-brands/ico-3.png", srcset="images/product-brands/ico-3@2x.png 2x" alt="")
+
+									.product-content
+										h2.text-md.product-content__title
+											| Custom title
+
+										p
+											| Praesent pretium rutrum orci, non tincidunt quam condimentum in. Ut congue suscipit dolor, quis aliquam magna. 
+											| Quisque sed est venenatis est dignissim lacinia non vitae dui. Nullam cursus, lacus et consectetur interdum, 
+											| elit lorem egestas erat, non consectetur lectus tortor nec purus. Morbi sed libero et tortor tristique pellentesque.
+											| Sed sagittis enim eget accumsan efficitur. Suspendisse ut pharetra nibh, eget tempor magna. Donec cras amet.
+
+									
+				.products-related
+					h2.text-lg.products-related__title
+						| More from [Main Category]
+					.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+							each product, idx in products
+							
+								.item
+									.product-box
+										.product-box__image
+											a(href="#")
+												img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+										.product-box__info
+											h3.product-box__title
+												a(href="#")= product.title
+											.product-box__text
+												p= product.text
+											.product-box__rating.rating
+												ul.rating-stars
+													li.rating__star.rating__star_full.fa.fa-star
+													li.rating__star.rating__star_full.fa.fa-star
+													li.rating__star.rating__star_full.fa.fa-star
+													li.rating__star.rating__star_full.fa.fa-star
+													li.rating__star.fa.fa-star
+												.rating-count
+													| 4.5 (23)
+
+											.product-box__price
+												if product.priceFree
+														.price= product.price
+												else
+														| from
+														.price= product.price
+												
+		
+		footer.footer
+			.container
+				.footer__inner
+					.footer__top
+						.row
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Company
+									
+									ul
+										li
+											a(href="#") About Us
+										li
+											a(href="#") How it works
+										li
+											a(href="#") FAQ
+										li
+											a(href="#") Guides
+										li
+											a(href="#") Contact Us
+										li
+											a(href="#") Terms and Conditions
+										li
+											a(href="#") Privacy Policy
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Browse
+
+									ul
+										li
+											a(href="#") Social Media
+										li
+											a(href="#") Adwords
+										li
+											a(href="#") SEO
+										li
+											a(href="#") CRO
+										li
+											a(href="#") Funnel
+										li
+											a(href="#") Growth
+										li
+											a(href="#") Ecommerce
+										li
+											a(href="#") Project Management
+										li
+											a(href="#") Analytics
+										li
+											a(href="#") Email Marketing
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Community
+									ul
+										li
+											a(href="#") Why Join DMS?
+										li
+											a(href="#") Advertise with Us
+										li
+											a(href="#") Contact Us
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Explore
+									ul
+										li
+											a(href="#") Digital Marketing Tools
+										li
+											a(href="#") Digital Marketing Services
+										li
+											a(href="#") Digital Marketing Courses
+
+					.footer__bottom
+						.copyright
+							| (c) 2019 Copyright Digital Marketing Supermarket. Made by WOOBRO
+
+
+		include pug/footer    

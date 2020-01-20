@@ -1,0 +1,172 @@
+extends pug/base
+
+append vars
+	-
+		var body = {
+			classList: ["main-page"]
+		}
+
+		var faq = new Array(3)
+		
+
+
+block content
+	.main-wrap
+		.site__layer
+		include pug/header
+		a(href="#").compare-fixed
+			.compare-fixed__text
+				| COMPARE 
+			span.badge-num
+				| 321
+		.hero.hero_page.heading-bg
+			.container.max-w_955
+				.hero__inner
+					a(href="#").btn.btn-blue-light.bdrs-5.btn-back
+						i.icon.icon-triangle-back
+						| Back
+					h1.hero__title
+						| FAQ
+		
+		main.main-container
+			.container.max-w_955
+				.faq
+					h2.faq__title.text-md
+						| Digital Marketing Tools
+					
+					.faq-boxes
+						each faqItem in faq
+							.faq-box
+								h3
+									| How does  Digital Marketing Supermarket service work? (h2, h3, h4, h5)
+								p
+									| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+									| when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+									| but also the leap into electronic typesetting, remaining essentially unchanged.
+
+								p
+									|	It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+									| publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+				.faq
+					h2.faq__title.text-md
+						| Digital Marketing Courses
+					
+					.faq-boxes
+						each faqItem in faq
+							.faq-box
+								h3
+									| How does  Digital Marketing Supermarket service work? (h2, h3, h4, h5)
+								p
+									| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+									| when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+									| but also the leap into electronic typesetting, remaining essentially unchanged.
+
+								p
+									|	It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+									| publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+				.faq
+					h2.faq__title.text-md
+						| Category headline 3
+					
+					.faq-boxes
+						each faqItem in faq
+							.faq-box
+								h3
+									| How does  Digital Marketing Supermarket service work? (h2, h3, h4, h5)
+								p
+									| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+									| when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+									| but also the leap into electronic typesetting, remaining essentially unchanged.
+
+								p
+									|	It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+									| publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+		
+		footer.footer
+			.container
+				.footer__inner
+					.footer__top
+						.row
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Company
+									
+									ul
+										li
+											a(href="#") About Us
+										li
+											a(href="#") How it works
+										li
+											a(href="#") FAQ
+										li
+											a(href="#") Guides
+										li
+											a(href="#") Contact Us
+										li
+											a(href="#") Terms and Conditions
+										li
+											a(href="#") Privacy Policy
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Browse
+
+									ul
+										li
+											a(href="#") Social Media
+										li
+											a(href="#") Adwords
+										li
+											a(href="#") SEO
+										li
+											a(href="#") CRO
+										li
+											a(href="#") Funnel
+										li
+											a(href="#") Growth
+										li
+											a(href="#") Ecommerce
+										li
+											a(href="#") Project Management
+										li
+											a(href="#") Analytics
+										li
+											a(href="#") Email Marketing
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Community
+									ul
+										li
+											a(href="#") Why Join DMS?
+										li
+											a(href="#") Advertise with Us
+										li
+											a(href="#") Contact Us
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Explore
+									ul
+										li
+											a(href="#") Digital Marketing Tools
+										li
+											a(href="#") Digital Marketing Services
+										li
+											a(href="#") Digital Marketing Courses
+
+					.footer__bottom
+						.copyright
+							| (c) 2019 Copyright Digital Marketing Supermarket. Made by WOOBRO
+
+
+		include pug/footer    

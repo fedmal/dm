@@ -1,0 +1,264 @@
+extends pug/base
+
+append vars
+	-
+		var body = {
+			classList: ["main-page"]
+		}
+
+		var products = [
+			{
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+
+		var products_courses = [
+			{
+				title: 'The Complete Digital Marketing Course - 12 Courses in 1',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				title: 'Viewst',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'HubSpot',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+
+		var products_services = [
+			{
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: true,
+			},
+			{
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+		
+
+
+block content
+	.main-wrap
+		.site__layer
+		include pug/header
+		a(href="#").compare-fixed
+			.compare-fixed__text
+				| COMPARE 
+			span.badge-num
+				| 321
+		.hero.hero_page_2.heading-bg
+			.container
+				.hero__inner.clearfix
+					h1.hero__title
+						| About Us
+		
+		main.main-container
+			.container
+				.row
+					.col-lg-7
+						.content.content_left
+							h3
+								| H2, H3, H4, H5 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+							p
+								| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+								| text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+
+							p
+								| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+								| text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+
+							h3
+								| H2, H3, H4, H5 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+							p
+								| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+								| text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+
+							p
+								| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+								| text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+
+					.col-lg-5
+						.subscribe.bdrs-5.subscribe_sidebar
+
+									.subscribe__info
+										h2.subscribe__title
+											| Subscribe to Our Newsletter
+										.subscribe__text
+											| Stay up to date with the latest marketing tools and tips.
+
+
+									.subscribe-form__wrap
+										form.subscribe-form(action="#")
+											input.form-control(placeholder="Email Address")
+											
+											button.btn.btn-square.btn-blue.subscribe-form__btn.btn_width_155
+												| Subscribe
+													
+		
+		footer.footer
+			.container
+				.footer__inner
+					.footer__top
+						.row
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Company
+									
+									ul
+										li
+											a(href="#") About Us
+										li
+											a(href="#") How it works
+										li
+											a(href="#") FAQ
+										li
+											a(href="#") Guides
+										li
+											a(href="#") Contact Us
+										li
+											a(href="#") Terms and Conditions
+										li
+											a(href="#") Privacy Policy
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Browse
+
+									ul
+										li
+											a(href="#") Social Media
+										li
+											a(href="#") Adwords
+										li
+											a(href="#") SEO
+										li
+											a(href="#") CRO
+										li
+											a(href="#") Funnel
+										li
+											a(href="#") Growth
+										li
+											a(href="#") Ecommerce
+										li
+											a(href="#") Project Management
+										li
+											a(href="#") Analytics
+										li
+											a(href="#") Email Marketing
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Community
+									ul
+										li
+											a(href="#") Why Join DMS?
+										li
+											a(href="#") Advertise with Us
+										li
+											a(href="#") Contact Us
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Explore
+									ul
+										li
+											a(href="#") Digital Marketing Tools
+										li
+											a(href="#") Digital Marketing Services
+										li
+											a(href="#") Digital Marketing Courses
+
+					.footer__bottom
+						.copyright
+							| (c) 2019 Copyright Digital Marketing Supermarket. Made by WOOBRO
+
+
+		include pug/footer    

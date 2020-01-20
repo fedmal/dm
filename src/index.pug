@@ -1,0 +1,1157 @@
+extends pug/base
+
+append vars
+	-
+		var body = {
+			classList: ["main-page"]
+		}
+
+		var products = [
+			{
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+
+		var products_courses = [
+			{
+				title: 'The Complete Digital Marketing Course - 12 Courses in 1',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				title: 'Viewst',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'HubSpot',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+
+		var products_services = [
+			{
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: true,
+			},
+			{
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+		
+
+
+block content
+	.main-wrap
+		.site__layer
+		include pug/header
+		a(href="#").compare-fixed
+			.compare-fixed__text
+				| COMPARE 
+			span.badge-num
+				| 321
+		.hero.heading-bg.hero_main
+			.container
+				.hero__inner
+					.row
+						.col-lg-7
+							.hero__info
+								h2.hero__title
+									| One Stop Shop For All Your 
+									br
+									| Digital Marketing Needs
+
+								.hero-search-wrap
+									h3.hero-search-wrap__title.text-md
+										| Search for Digital Marketing Tools
+									.hero-search
+										.hero-search__input
+											input.form-control(placeholder="e.g. SEO or Email Marketing")
+										.hero-search__append
+											button.btn.btn-green.hero-search__btn
+												i.icon.icon-search
+												| SEARCH
+
+									ul.search-filter.hero-search__filter
+										li
+											label.radio
+												input(type="radio" name="search")
+												| Tools
+										li
+											label.radio
+												input(type="radio" name="search")
+												| Courses
+										li
+											label.radio
+												input(type="radio" name="search")
+												| Services
+
+								.tags.hero-tags
+									.tags-label
+										| Popular:
+									ul.tags-list
+										li
+											a(href="#").btn-tag Seo tools
+										li
+											a(href="#").btn-tag Seo courses
+										li
+											a(href="#").btn-tag CRO courses
+										li
+											a(href="#").btn-tag Web Design service
+
+						.col-lg-5
+							.hero__image
+								.hero__image__inner
+									img(src="images/hero-bg.png", srcset="images/hero-bg@2x.png 2x", alt="").hero__image__bg
+									img(src="images/hero-girl.png", srcset="images/hero-girl@2x.png 2x", alt="").hero__image__girl.flot-y
+									
+
+		.ml-boxes
+			.container.ml-boxes__container
+				.ml-boxes__inner
+					.row.ml-boxes__grid.m-0
+						.col-lg-4.ml-boxes__col.p-0
+							a(href="#").ml-box
+								.ml-box__inner
+									.ml-box__icon
+										img(src="images/courses-icon/ico-1.svg", alt="")
+									.ml-box__info
+										h3.ml__title
+											|  Digital Marketing Tools
+										p
+											| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing
+										span.ml__btn.btn.btn-outline-white
+											| Explore
+						.col-lg-4.ml-boxes__col.p-0
+							a(href="#").ml-box
+								.ml-box__inner
+									.ml-box__icon
+										img(src="images/courses-icon/ico-2.svg", alt="")
+									.ml-box__info
+										h3.ml__title
+											|  Digital Marketing Courses
+										p
+											| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing
+
+										span.ml__btn.btn.btn-outline-white
+											| Explore
+
+						.col-lg-4.ml-boxes__col.p-0
+							a(href="#").ml-box
+								.ml-box__inner
+									.ml-box__icon
+										img(src="images/courses-icon/ico-3.svg", alt="")
+									.ml-box__info
+										h3.ml__title
+											|  Digital Marketing Services
+										p
+											| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing
+
+										span.ml__btn.btn.btn-outline-white
+											| Explore
+
+
+		.subscribe-wrap.subscribe-wrap_main
+			.container
+				.subscribe.bdrs-5
+					.row
+						.col-lg-6
+							.subscribe__info
+								h2.subscribe__title
+									| Subscribe to Our Newsletter
+								.subscribe__text
+									| Stay up to date with the latest marketing tools and tips.
+
+						.col-lg-6
+							.subscribe-form__wrap
+								form.subscribe-form(action="#")
+									input.form-control(placeholder="Email Address")
+									
+									button.btn.btn-square.btn-blue.subscribe-form__btn.btn_width_155
+										| Subscribe
+
+		.products-carousels
+			.products-carousel-tabs
+				.container
+					.products-carousel-tabs__heading
+						.products-carousel-tabs__heading__left
+							span.products-carousel-tabs__count.badge-num.badge-num
+								| 321
+
+							h2.text-lg.products-carousel-tabs__title
+								| Digital Marketing Tools
+
+
+						a(href="#").btn.btn-outline-blue.carousel-tabs__view
+							| View All
+					.carousel-tabs.tabs
+						ul.carousel-tabs-nav.tabs-nav
+								li.current_tab
+									a(href="#") SEO
+								li
+									a(href="#") Email Marketing
+								li
+									a(href="#") Adwords
+								li
+									a(href="#") Funnel
+								li
+									a(href="#") Media
+								li
+									a(href="#") CRO
+								li
+									a(href="#") Analytics
+						.carousel-tabs-content.tabs-content
+							.tabs-content-tab.active_tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text
+														p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.rating__star_full.fa.fa-star
+															li.rating__star.rating__star_full.fa.fa-star
+															li.rating__star.rating__star_full.fa.fa-star
+															li.rating__star.rating__star_full.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+														
+
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products_services
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text
+														p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+	
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products_services
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text
+														p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+
+								.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products_services
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text
+														p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products_services
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text
+														p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products_services
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text
+														p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products_services
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text
+														p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+
+						.carousel-tabs__view-mob
+							a(href="#").btn.btn-outline-blue
+								| View All
+
+
+			.products-carousel-tabs
+				.container
+					.products-carousel-tabs__heading
+						.products-carousel-tabs__heading__left
+							span.products-carousel-tabs__count.badge-num
+								| 321
+
+							h2.text-lg.products-carousel-tabs__title
+								| Digital Marketing Courses
+
+
+						a(href="#").btn.btn-outline-blue.carousel-tabs__view
+							| View All
+					.carousel-tabs.tabs
+						ul.carousel-tabs-nav.tabs-nav
+								li.current_tab
+									a(href="#") SEO
+								li
+									a(href="#") Email Marketing
+								li
+									a(href="#") Adwords
+								li
+									a(href="#") Funnel
+								li
+									a(href="#") Media
+								li
+									a(href="#") CRO
+								li
+									a(href="#") Analytics
+						.carousel-tabs-content.tabs-content
+							.tabs-content-tab.active_tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products_courses
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													//- .product-box__text
+													//- 	p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.rating__star_full.fa.fa-star
+															li.rating__star.rating__star_full.fa.fa-star
+															li.rating__star.rating__star_full.fa.fa-star
+															li.rating__star.rating__star_full.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text
+														p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text
+														p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text
+														p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text
+														p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text
+														p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text
+														p= product.text
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+						.carousel-tabs__view-mob
+							a(href="#").btn.btn-outline-blue
+								| View All
+
+
+
+			.products-carousel-tabs
+				.container
+					.products-carousel-tabs__heading
+						.products-carousel-tabs__heading__left
+							span.products-carousel-tabs__count.badge-num
+								| 321
+
+							h2.text-lg.products-carousel-tabs__title
+								| Top Digital Marketing Services
+
+
+						a(href="#").btn.btn-outline-blue.carousel-tabs__view
+							| View All
+					.carousel-tabs.tabs
+						ul.carousel-tabs-nav.tabs-nav
+								li.current_tab
+									a(href="#") SEO
+								li
+									a(href="#") Email Marketing
+								li
+									a(href="#") Adwords
+								li
+									a(href="#") Funnel
+								li
+									a(href="#") Media
+								li
+									a(href="#") CRO
+								li
+									a(href="#") Analytics
+						.carousel-tabs-content.tabs-content
+							.tabs-content-tab.active_tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+														.product-box__logo
+															img(src=`images/product/logo-${idx + 1}.png`, srcset=`images/product/logo-${idx + 1}@2x.png 2x`, alt="")
+
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text= product.text
+
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.rating__star_full.fa.fa-star
+															li.rating__star.rating__star_full.fa.fa-star
+															li.rating__star.rating__star_full.fa.fa-star
+															li.rating__star.rating__star_full.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+														.product-box__logo
+															img(src=`images/product/logo-${idx + 1}.png`, srcset=`images/product/logo-${idx + 1}@2x.png 2x`, alt="")
+
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text= product.text
+
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+														
+														
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+														.product-box__logo
+															img(src=`images/product/logo-${idx + 1}.png`, srcset=`images/product/logo-${idx + 1}@2x.png 2x`, alt="")
+
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text= product.text
+
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+														.product-box__logo
+															img(src=`images/product/logo-${idx + 1}.png`, srcset=`images/product/logo-${idx + 1}@2x.png 2x`, alt="")
+
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text= product.text
+
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+														.product-box__logo
+															img(src=`images/product/logo-${idx + 1}.png`, srcset=`images/product/logo-${idx + 1}@2x.png 2x`, alt="")
+
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text= product.text
+
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+														.product-box__logo
+															img(src=`images/product/logo-${idx + 1}.png`, srcset=`images/product/logo-${idx + 1}@2x.png 2x`, alt="")
+
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text= product.text
+
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+
+
+							.tabs-content-tab
+								.carousel-products.owl-carousel(data-autoplay="false" data-nav-text = ["<i class='icon icon-arrow-right'></i> ","<i class='ficon icon-arrow-right'></i>"] data-nav="true" data-dots="false" data-loop="true" data-auto-width="false" data-slidespeed="200" data-margin="54" data-responsive='{"0":{"autoWidth" : "true", "margin" : 20}, "600":{"autoWidth" : "true", "margin" : 20}, "900":{"autoWidth" : "true", "margin" : 20}, "1200":{"items": "4"}}')
+									each product, idx in products
+									
+										.item
+											.product-box
+												.product-box__image
+													a(href="#")
+														img(src=`images/product/img-${idx + 1}.jpg`, srcset=`images/product/img-${idx + 1}@2x.jpg 2x`, alt="")
+														.product-box__logo
+															img(src=`images/product/logo-${idx + 1}.png`, srcset=`images/product/logo-${idx + 1}@2x.png 2x`, alt="")
+
+												.product-box__info
+													h3.product-box__title
+														a(href="#")= product.title
+													.product-box__text= product.text
+
+													.product-box__rating.rating
+														ul.rating-stars
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+															li.rating__star.fa.fa-star
+														.rating-count
+															| 4.5 (23)
+
+													.product-box__price
+														if product.priceFree
+																.price= product.price
+														else
+																| from
+																.price= product.price
+						.carousel-tabs__view-mob
+							a(href="#").btn.btn-outline-blue
+								| View All
+
+
+
+
+		.works-about-wrap
+			.container
+				.works-about.bdrs-5
+
+					.row
+						.col-lg-6
+							.works-about__info
+								h2.text-lg.works-about__title
+									| How it works
+
+								ul
+									li 
+										| Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+									li 
+										| Lorem Ipsum is 
+										a(href="#")
+											| simply dummy 
+										| text of the printing and typesetting industry.
+						
+								p
+									| Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+								
+								.works-about__btn
+									a(href="#").btn.btn-square.btn-blue.btn_width_155
+										| Learn more
+
+						.col-lg-6
+							.works-about__image
+								img(src="images/how-it-works.png", srcset="images/images/how-it-works@2x.png 2x", alt="")
+
+		
+		footer.footer
+			.container
+				.footer__inner
+					.footer__top
+						.row
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Company
+									
+									ul
+										li
+											a(href="#") About Us
+										li
+											a(href="#") How it works
+										li
+											a(href="#") FAQ
+										li
+											a(href="#") Guides
+										li
+											a(href="#") Contact Us
+										li
+											a(href="#") Terms and Conditions
+										li
+											a(href="#") Privacy Policy
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Browse
+
+									ul
+										li
+											a(href="#") Social Media
+										li
+											a(href="#") Adwords
+										li
+											a(href="#") SEO
+										li
+											a(href="#") CRO
+										li
+											a(href="#") Funnel
+										li
+											a(href="#") Growth
+										li
+											a(href="#") Ecommerce
+										li
+											a(href="#") Project Management
+										li
+											a(href="#") Analytics
+										li
+											a(href="#") Email Marketing
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Community
+									ul
+										li
+											a(href="#") Why Join DMS?
+										li
+											a(href="#") Advertise with Us
+										li
+											a(href="#") Contact Us
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Explore
+									ul
+										li
+											a(href="#") Digital Marketing Tools
+										li
+											a(href="#") Digital Marketing Services
+										li
+											a(href="#") Digital Marketing Courses
+
+					.footer__bottom
+						.copyright
+							| (c) 2019 Copyright Digital Marketing Supermarket. Made by WOOBRO
+
+
+		include pug/footer    

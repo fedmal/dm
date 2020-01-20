@@ -1,0 +1,284 @@
+extends pug/base
+
+append vars
+	-
+
+
+		var products = [
+			{
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+
+		var products_courses = [
+			{
+				title: 'The Complete Digital Marketing Course - 12 Courses in 1',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				title: 'Viewst',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'HubSpot',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+
+		var products_services = [
+			{
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: true,
+			},
+			{
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+		
+
+
+
+		var posts = new Array(16)
+	
+		
+
+block content
+	.main-wrap
+		.site__layer
+		include pug/header
+		a(href="#").compare-fixed
+			.compare-fixed__text
+				| COMPARE 
+			span.badge-num
+				| 321
+		.hero.hero_tools.hero_center.heading-bg
+			.container
+				.hero__inner.clearfix.max-w-823
+					.hero__title
+						| Explore Digital Marketing Tools
+
+					.hero__desc
+						p
+							| Find your digital marketing tool in one of our 700+ categories.
+
+					.hero-search.hero-search_single
+						.hero-search__input
+							input.form-control(placeholder="e.g. SEO or Email Marketing")
+						.hero-search__append
+							button.btn.btn-green.hero-search__btn
+								i.icon.icon-search
+								| SEARCH
+		
+
+		main.main
+			.container
+				.control-bar
+					.control-bar__left
+
+					.control-bar__right
+						ul.control-bar-list
+							li.control-bar-item
+								.control-bar__label
+									| Show
+								select.control-bar__select.select-styler
+									option
+										| 24 per page
+									option
+										| 24 per page
+									option
+										| 24 per page
+									
+							li.control-bar-item
+								.control-bar__label
+									| Show
+								select.control-bar__select.select-styler
+									option
+										| 24 per page
+									option
+										| 24 per page
+									option
+										| 24 per page
+
+				.tools-grid
+					.row.row-gap-10
+						each post, idx in posts
+							.col-xl-3.col-gap-10
+								.post-box
+									.post-box__image
+										a(href="#")
+											img(src=`images/ns/img-1.jpg`, alt="")
+									.post-box__info
+										h3.post-box__title.box-title
+											a(href="#")
+												| Competitors Analysis (554)
+										.post-box__desc.box-desc
+											p
+												| Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+												| Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+
+
+												
+		
+		footer.footer
+			.container
+				.footer__inner
+					.footer__top
+						.row
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Company
+									
+									ul
+										li
+											a(href="#") About Us
+										li
+											a(href="#") How it works
+										li
+											a(href="#") FAQ
+										li
+											a(href="#") Guides
+										li
+											a(href="#") Contact Us
+										li
+											a(href="#") Terms and Conditions
+										li
+											a(href="#") Privacy Policy
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Browse
+
+									ul
+										li
+											a(href="#") Social Media
+										li
+											a(href="#") Adwords
+										li
+											a(href="#") SEO
+										li
+											a(href="#") CRO
+										li
+											a(href="#") Funnel
+										li
+											a(href="#") Growth
+										li
+											a(href="#") Ecommerce
+										li
+											a(href="#") Project Management
+										li
+											a(href="#") Analytics
+										li
+											a(href="#") Email Marketing
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Community
+									ul
+										li
+											a(href="#") Why Join DMS?
+										li
+											a(href="#") Advertise with Us
+										li
+											a(href="#") Contact Us
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Explore
+									ul
+										li
+											a(href="#") Digital Marketing Tools
+										li
+											a(href="#") Digital Marketing Services
+										li
+											a(href="#") Digital Marketing Courses
+
+					.footer__bottom
+						.copyright
+							| (c) 2019 Copyright Digital Marketing Supermarket. Made by WOOBRO
+
+
+		include pug/footer    

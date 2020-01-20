@@ -1,0 +1,470 @@
+extends pug/base
+
+append vars
+	-
+		var body = {
+			classList: ["main-page"]
+		}
+
+		var products = [
+			{
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+
+		var products_courses = [
+			{
+				title: 'The Complete Digital Marketing Course - 12 Courses in 1',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				title: 'Viewst',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'HubSpot',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+
+		var products_services = [
+			{
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: true,
+			},
+			{
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+		
+
+
+block content
+	.main-wrap
+		.site__layer
+		include pug/header
+		a(href="#").compare-fixed
+			.compare-fixed__text
+				| COMPARE 
+			span.badge-num
+				| 321
+		.hero.hero_compare.heading-bg
+			.container
+				.hero__inner.clearfix
+					h1.hero__title
+						| Compare Digital Marketing Supermarket
+					
+					ul.hero-tabs-nav
+						li.current_tab
+							a(href="#")
+								| Digital Marketing Tools 
+								span
+									| (36)
+						li
+							a(href="#")
+								| Digital Marketing Courses 
+								span
+									| (6)
+						li
+							a(href="#")
+								| Digital Marketing Services 
+								span
+									| (65)
+		
+		main.main-container
+			.container.max-w_1030
+				.compare-heading
+					.row
+						.col-lg-6
+							.compare-heading__left
+								h2.compare-heading__title.text-lg
+									| Compare Digital Marketing Tools
+								span.products-carousel-tabs__count.badge-num
+									| 36
+
+						.col-lg-6
+							.compare-heading__right
+								.compare-choose
+									.compare-choose__label
+										| Chooce a Category
+									select.select-styler.select-radius.compare-choose__select
+										option
+											| texttexttrx
+										option
+											| texttexttrx
+										option
+											| texttexttrx
+													
+				.compare-body
+					ul.compare-body-heading.compare-col
+						li.compare__row_1.compare__row
+						li.compare__row_2.compare__row 
+							.compare__row__body
+								| Category
+						li.compare__row_3.compare__row 
+							.compare__row__body
+								| Price
+								br
+								| Options
+						li.compare__row_4.compare__row 
+							.compare__row__body
+								| Price
+						li.compare__row_5.compare__row 
+							.compare__row__body
+								| Feature
+
+					.compare-carousel.carousel_wrapper(data-columns='3' data-slides-to-scroll='1' data-pagination='on' data-navigation='on' data-auto-height='on' data-draggable='on' data-infinite='off' data-autoplay='off' data-autoplay-speed='3000' data-pause-on-hover='off' data-vertical='off' data-vertical-swipe='off' data-tablet-landscape='1' data-tablet-portrait='1' data-mobile='1')
+						.carousel.compare-carousel
+							.item
+								.compare-box.compare-col
+									.compare-box__top.compare__row.compare__row_1
+										.compare__row__body
+											.compare-box__image
+												img(src="images/compare/img-1.jpg", alt="")
+
+											h2.compare-box__title
+												a(href="#") WebEngage
+
+											.compare-box__top__button
+												a(href="#").btn.btn-green
+													| Visit Website
+									.compare-box__row.compare__row.compare__row_2
+										.compare__row__body
+											| SEO
+									.compare-box__row.compare__row.compare__row_3
+										.compare__row__body
+											| -
+									.compare-box__row.compare__row.compare__row_4
+										.compare__row__body
+											| FREE
+									.compare-box__row.compare__row.compare__row_5
+										.compare__row__body
+											ul
+												li Keyword Research
+												li WordPress Plugin
+									.compare-box__bottom.compare__row
+										.compare__row__body
+											.compare-box__bottom__button
+												a(href="#").btn.btn-green
+													| Visit Website
+											a(href="#").compare-box__remove
+												| Remove from list
+
+
+
+							.item
+								.compare-box.compare-col
+									.compare-box__top.compare__row.compare__row_1
+										.compare__row__body
+											.compare-box__image
+												img(src="images/compare/img-1.jpg", alt="")
+
+											h2.compare-box__title
+												a(href="#") WebEngage
+
+											.compare-box__top__button
+												a(href="#").btn.btn-green
+													| Visit Website
+									.compare-box__row.compare__row.compare__row_2
+										.compare__row__body
+											| Email marketing
+									.compare-box__row.compare__row.compare__row_3
+										.compare__row__body
+											ul
+												li Monthly Subscription
+												li Annual Subscription
+												li Free Trial
+									.compare-box__row.compare__row.compare__row_4
+										.compare__row__body
+											| from £200
+									.compare-box__row.compare__row.compare__row_5
+										.compare__row__body
+											ul
+												li Automated Emails
+												li CRM
+									.compare-box__bottom.compare__row
+										.compare__row__body
+											.compare-box__bottom__button
+												a(href="#").btn.btn-green
+													| Visit Website
+											a(href="#").compare-box__remove
+												| Remove from list
+
+
+
+
+							.item
+								.compare-box.compare-col
+									.compare-box__top.compare__row.compare__row_1
+										.compare__row__body
+											.compare-box__image
+												img(src="images/compare/img-1.jpg", alt="")
+
+											h2.compare-box__title
+												a(href="#") WebEngage
+
+											.compare-box__top__button
+												a(href="#").btn.btn-green
+													| Visit Website
+									.compare-box__row.compare__row.compare__row_2
+										.compare__row__body
+											| Google Analytics
+									.compare-box__row.compare__row.compare__row_3
+										.compare__row__body
+											ul
+												li Monthly Subscription
+												li Free Trial
+									.compare-box__row.compare__row.compare__row_4
+										.compare__row__body
+											| from £10
+									.compare-box__row.compare__row.compare__row_5
+										.compare__row__body
+											ul
+												li WordPress Plugins
+												li Pingdom Plugin
+									.compare-box__bottom.compare__row
+										.compare__row__body
+											.compare-box__bottom__button
+												a(href="#").btn.btn-green
+													| Visit Website
+											a(href="#").compare-box__remove
+												| Remove from list
+
+
+
+							.item
+								.compare-box.compare-col
+									.compare-box__top.compare__row.compare__row_1
+										.compare__row__body
+											.compare-box__image
+												img(src="images/compare/img-1.jpg", alt="")
+
+											h2.compare-box__title
+												a(href="#") WebEngage
+
+											.compare-box__top__button
+												a(href="#").btn.btn-green
+													| Visit Website
+									.compare-box__row.compare__row.compare__row_2
+										.compare__row__body
+											| SEO
+									.compare-box__row.compare__row.compare__row_3
+										.compare__row__body
+											| -
+									.compare-box__row.compare__row.compare__row_4
+										.compare__row__body
+											| FREE
+									.compare-box__row.compare__row.compare__row_5
+										.compare__row__body
+											ul
+												li Keyword Research
+												li WordPress Plugin
+									.compare-box__bottom.compare__row
+										.compare__row__body
+											.compare-box__bottom__button
+												a(href="#").btn.btn-green
+													| Visit Website
+											a(href="#").compare-box__remove
+												| Remove from list
+
+
+							.item
+								.compare-box.compare-col
+									.compare-box__top.compare__row.compare__row_1
+										.compare__row__body
+											.compare-box__image
+												img(src="images/compare/img-1.jpg", alt="")
+
+											h2.compare-box__title
+												a(href="#") WebEngage
+
+											.compare-box__top__button
+												a(href="#").btn.btn-green
+													| Visit Website
+									.compare-box__row.compare__row.compare__row_2
+										.compare__row__body
+											| SEO
+									.compare-box__row.compare__row.compare__row_3
+										.compare__row__body
+											| -
+									.compare-box__row.compare__row.compare__row_4
+										.compare__row__body
+											| FREE
+									.compare-box__row.compare__row.compare__row_5
+										.compare__row__body
+											ul
+												li Keyword Research
+												li WordPress Plugin
+									.compare-box__bottom.compare__row
+										.compare__row__body
+											.compare-box__bottom__button
+												a(href="#").btn.btn-green
+													| Visit Website
+											a(href="#").compare-box__remove
+												| Remove from list
+
+
+
+		footer.footer
+			.container
+				.footer__inner
+					.footer__top
+						.row
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Company
+									
+									ul
+										li
+											a(href="#") About Us
+										li
+											a(href="#") How it works
+										li
+											a(href="#") FAQ
+										li
+											a(href="#") Guides
+										li
+											a(href="#") Contact Us
+										li
+											a(href="#") Terms and Conditions
+										li
+											a(href="#") Privacy Policy
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Browse
+
+									ul
+										li
+											a(href="#") Social Media
+										li
+											a(href="#") Adwords
+										li
+											a(href="#") SEO
+										li
+											a(href="#") CRO
+										li
+											a(href="#") Funnel
+										li
+											a(href="#") Growth
+										li
+											a(href="#") Ecommerce
+										li
+											a(href="#") Project Management
+										li
+											a(href="#") Analytics
+										li
+											a(href="#") Email Marketing
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Community
+									ul
+										li
+											a(href="#") Why Join DMS?
+										li
+											a(href="#") Advertise with Us
+										li
+											a(href="#") Contact Us
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Explore
+									ul
+										li
+											a(href="#") Digital Marketing Tools
+										li
+											a(href="#") Digital Marketing Services
+										li
+											a(href="#") Digital Marketing Courses
+
+					.footer__bottom
+						.copyright
+							| (c) 2019 Copyright Digital Marketing Supermarket. Made by WOOBRO
+
+
+		include pug/footer    
