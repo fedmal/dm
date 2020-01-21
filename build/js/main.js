@@ -3,12 +3,12 @@ $(function() {
 
 
   var siteToggle = $('.navbar-toggler'),
-      layer=$('.site__layer'),
+
       siteMenu= $('.header__right');
 
 
   siteToggle.on('click', function(){
-    layer.toggleClass('active');
+
     $(this).toggleClass("collapsed");
       siteMenu.toggleClass("show");
     $('body').toggleClass('overflow-hidden');
@@ -16,7 +16,6 @@ $(function() {
 
 
   $('.site__layer').on('click', function(){
-    layer.removeClass('active');
     siteToggle.removeClass('collapsed');
     siteMenu.removeClass('show');
     $('body').removeClass('overflow-hidden');
@@ -47,12 +46,14 @@ $(function() {
   }
   equalHeight('.featured-icons .featured__icon');
 
+  setTimeout(function() {
+    equalHeight('.compare__row_1');
+    equalHeight('.compare__row_2');
+    equalHeight('.compare__row_3');
+    equalHeight('.compare__row_4');
+    equalHeight('.compare__row_5');
+  }, 500)
 
-  equalHeight('.compare__row_1');
-  equalHeight('.compare__row_2');
-  equalHeight('.compare__row_3');
-  equalHeight('.compare__row_4');
-  equalHeight('.compare__row_5');
 // $(window).on('load', function(event) {
 
 //   $('.compare-col').jQueryEqualHeight('.compare__row');
@@ -361,4 +362,123 @@ function rb_carousel_responsive_array( res, cols ){
 
 
 
+
+
+
+
+
+
+  jQuery('#grid').click(function() {
+    if( jQuery(this).hasClass('active') ){
+      return false;
+    }
+    jQuery(this).addClass('active');
+    jQuery('#list').removeClass('active');
+
+    jQuery('.products').fadeOut(300, function() {
+      jQuery(this).addClass('products-grid').removeClass('products-list').fadeIn(300);
+    });
+    return false;
+  });
+
+  jQuery('#list').click(function() {
+    if( jQuery(this).hasClass('active') ){
+      return false;
+    }
+    jQuery(this).addClass('active');
+    jQuery('#grid').removeClass('active');
+    jQuery('.products').fadeOut(300, function() {
+      jQuery(this).removeClass('products-grid').addClass('products-list').fadeIn(300);
+    });
+    return false;
+  });
+
+
+
+
+
+  var filterToggle = $('.filter-toggle-btn'),
+      layer = $('.site__layer'),
+      filterPanel= $('.products-row-small-filter__sidebar');
+
+
+      filterToggle.on('click', function(){
+        layer.toggleClass('active');
+        $(this).toggleClass("collapsed");
+        filterPanel.toggleClass("show");
+        $('body').toggleClass('overflow-hidden');
+      });
+
+      $('.site__layer, .product-filter__heading__close').on('click', function(){
+        layer.removeClass('active');
+        filterToggle.removeClass('collapsed');
+        filterPanel.removeClass('show');
+      $('body').removeClass('overflow-hidden');
+      })
+
+
+
+      $('.share-label').on('click', function() {
+        $(this).parent('.share').toggleClass('show');
+      })
+
+
+
+
 });
+// <script>
+// jQuery(document).ready(function(){
+//             if ( typeof jQuery.cookie == 'function' && jQuery.cookie('gridcookie') == null ) {
+//               jQuery('.products').addClass('grid');
+//               jQuery('.control-bar-view #grid').addClass('active');
+//             }
+            
+//             if( typeof jQuery.cookie == 'function' ){
+//               jQuery('#grid').click(function() {
+//                 if( jQuery(this).hasClass('active') ){
+//                   return false;
+//                 }
+//                 jQuery(this).addClass('active');
+//                 jQuery('#list').removeClass('active');
+//                 jQuery.cookie('gridcookie','grid', { path: '/' });
+//                 jQuery('.products').fadeOut(300, function() {
+//                   jQuery(this).addClass('grid').removeClass('list').fadeIn(300);
+//                 });
+//                 return false;
+//               });
+
+//               jQuery('#list').click(function() {
+//                 if( jQuery(this).hasClass('active') ){
+//                   return false;
+//                 }
+//                 jQuery(this).addClass('active');
+//                 jQuery('#grid').removeClass('active');
+//                 jQuery.cookie('gridcookie','list', { path: '/' });
+//                 jQuery('.products').fadeOut(300, function() {
+//                   jQuery(this).removeClass('grid').addClass('list').fadeIn(300);
+//                 });
+//                 return false;
+//               });
+
+//               if( jQuery.cookie('gridcookie') ){
+//                 jQuery('.products, .control-bar-view').addClass(jQuery.cookie('gridcookie'));
+//               }
+
+//               if( jQuery.cookie('gridcookie') == 'grid' ){
+//                 jQuery('.control-bar-view #grid').addClass('active');
+//                 jQuery('.control-bar-view #list').removeClass('active');
+//               }
+
+//               if( jQuery.cookie('gridcookie') == 'list' ){
+//                 jQuery('.control-bar-view #list').addClass('active');
+//                 jQuery('.control-bar-view #grid').removeClass('active');
+//               }
+
+//               jQuery('.control-bar-view label').click(function(event) {
+//                 event.preventDefault();
+//               });
+//             }
+
+//             })
+
+// </script>
