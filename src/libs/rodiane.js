@@ -1,3 +1,5 @@
-$('[data-fancybox="filter"]').fancybox({
-	// Options will go here
-});
+// $('[data-fancybox="filter"]').fancybox({
+// 	// Options will go here
+// });
+
+console.log(1)
