@@ -130,7 +130,7 @@ block content
 				| COMPARE 
 			span.badge-num
 				| 321
-		.hero.hero_tools.hero_center.heading-bg
+		.hero.hero_posts.hero_center.heading-bg
 			.container
 				.hero__inner.clearfix.max-w-823
 					.hero__title
@@ -149,7 +149,7 @@ block content
 								| SEARCH
 		
 
-		main.main
+		main.main.page-posts
 			.container
 				.control-bar
 					.control-bar__left
@@ -178,10 +178,10 @@ block content
 									option
 										| 24 per page
 
-				.tools-grid
+				.posts-grid
 					.row.row-gap-10
 						each post, idx in posts
-							.col-xl-3.col-gap-10
+							.col-xl-3.col-md-4.col-sm-6.col-gap-10
 								.post-box
 									.post-box__image
 										a(href="#")
