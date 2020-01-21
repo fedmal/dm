@@ -14577,7 +14577,15 @@ a {
     .page-compare .max-w_1030 {
       max-width: 500px; } }
 
-.red {
-  color: red; }
+.popup-box-out {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0; }
+
+.popup-box {
+  color: red;
+  position: fixed; }
 
 /*# sourceMappingURL=main.css.map */

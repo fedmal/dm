@@ -1,0 +1,592 @@
+extends pug/base
+
+append vars
+	-
+
+
+		var products = [
+			{
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+
+		var products_courses = [
+			{
+				title: 'The Complete Digital Marketing Course - 12 Courses in 1',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				title: 'Viewst',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'HubSpot',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+
+		var products_services = [
+			{
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: true,
+			},
+			{
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: true,
+			},
+			{
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+		];
+		
+
+
+		var productsGrid = [
+			{
+				img: 'img-1.jpg',
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				img: 'img-2.jpg',
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				img: 'img-3.jpg',
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				img: 'img-4.jpg',
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				img: 'img-1.jpg',
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				img: 'img-2.jpg',
+				title: 'Psylio',
+				text: 'Manage your schedule, records and billing in total security…',
+				price: 'FREE',
+				priceFree: true,
+				logo: false,
+			},
+			{
+				img: 'img-3.jpg',
+				title: 'Viewst',
+				text: 'Create always-visible and professionally designed ads...',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				img: 'img-4.jpg',
+				title: 'HubSpot',
+				text: 'Marketing, sales, and service software that helps ',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+			{
+				img: 'img-1.jpg',
+				title: 'WebEngage',
+				text: 'WebEngage helps you craft contextual and personalized…',
+				price: '£199.99',
+				priceFree: false,
+				logo: false,
+			},
+		];
+
+
+
+		var posts = new Array(16)
+	
+		
+
+block content
+	.main-wrap
+		.site__layer
+		include pug/header
+		a(href="#").compare-fixed
+			.compare-fixed__text
+				| COMPARE 
+			span.badge-num
+				| 321
+		.hero.hero_category.hero_center.heading-bg
+			.container
+				.hero__inner.clearfix.max-w-823
+					.hero__title
+						| Digital Marketing Tools
+
+
+
+					.hero-search.hero-search_single
+						.hero-search__input
+							input.form-control(placeholder="e.g. SEO or Email Marketing")
+						.hero-search__append
+							button.btn.btn-green.hero-search__btn
+								i.icon.icon-search
+								| SEARCH
+		
+
+		main.main.page-catalog
+			.container
+				.page-info
+					h2.page-info__title.text-lg
+						| Category title
+					.page-info__desc
+						p
+							| Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. 
+
+				.products-row-small-filter
+					.product-filter.products-row-small-filter__sidebar
+							.product-filter__heading
+								h3
+									| Filter Results 
+								span.badge-num
+									| 321
+
+								button.product-filter__heading__close
+									i.icon.icon-close
+
+
+							.product-filter__body
+								.product-filter__box
+									h3.product-filter__box__title
+										| Pricing Options
+									ul.product-filter__list
+										li
+											label.product-filter-control
+												input(type="checkbox")
+												span.product-filter-control__label
+													| Free Trial
+										li
+											label.product-filter-control
+												input(type="checkbox")
+												span.product-filter-control__label
+													| Monthly Subscriptions
+										li
+											label.product-filter-control
+												input(type="checkbox")
+												span.product-filter-control__label
+													| Annual Subscriptions
+										li
+											label.product-filter-control
+												input(type="checkbox")
+												span.product-filter-control__label
+													| One-Time License
+									
+								.product-filter__box
+									h3.product-filter__box__title
+										| Price
+									ul.product-filter__list
+										li
+											label.product-filter-control
+												input(type="checkbox")
+												span.product-filter-control__label
+													| Free
+										li
+											label.product-filter-control
+												input(type="checkbox")
+												span.product-filter-control__label
+													| Under £10
+										li
+											label.product-filter-control
+												input(type="checkbox")
+												span.product-filter-control__label
+													| £10 to £50
+										li
+											label.product-filter-control
+												input(type="checkbox")
+												span.product-filter-control__label
+													| £50 to £100
+										li
+											label.product-filter-control
+												input(type="checkbox")
+												span.product-filter-control__label
+													| Over £100
+							
+
+
+							.product-filter__bottom
+
+								button.btn.btn-green.btn-block.product-filter__apply
+									| Apply Filters
+
+								button.btn.btn-link.btn-block.product-filter__clear
+									i.icon.icon-clear
+									| Clear All Filters
+							
+							
+
+					.products-row-small-filter__content
+						.control-bar
+							.control-bar__left
+								ul.control-bar-view
+									li.control-bar-item
+										label#grid.active
+											input(type="radio" name="view" checked)
+											span.control-bar__label
+												| Grid View
+									li.control-bar-item
+										label#list
+											input(type="radio" name="view")
+											span.control-bar__label
+												| List View
+								
+							.control-bar__right
+								ul.control-bar-list
+									li.control-bar-item
+										.control-bar__label
+											| Show
+										select.control-bar__select.select-styler
+											option
+												| 24 per page
+											option
+												| 24 per page
+											option
+												| 24 per page
+											
+									li.control-bar-item
+										.control-bar__label
+											| Show
+										select.control-bar__select.select-styler
+											option
+												| 24 per page
+											option
+												| 24 per page
+											option
+												| 24 per page
+
+
+						.filter-toggle
+								.filter-toggle__left
+									h3
+										| Filter
+									span.badge-num
+										| 321
+								.filter-toggle__right
+									button.filter-toggle-btn
+										span
+										span
+
+						.products.row.row-gap-10
+							each productGrid, idx in productsGrid
+								.col-xl-4.col-gap-10.procuct__col
+									.product-box.product-box_wide
+										.product-box__image
+											a(href="#")
+												img(src=`images/product/${productGrid.img}` alt="")
+										.product-box__info
+
+											h3.product-box__title
+												a(href="#")= productGrid.title
+											.product-box__text
+												p= productGrid.text
+
+											.product-box__rating.rating
+												ul.rating-stars
+													li.rating__star.rating__star_full.fa.fa-star
+													li.rating__star.rating__star_full.fa.fa-star
+													li.rating__star.rating__star_full.fa.fa-star
+													li.rating__star.rating__star_full.fa.fa-star
+													li.rating__star.fa.fa-star
+												.rating-count
+													| 4.5 (23)
+
+												.product-box__price
+													if  productGrid.priceFree
+															.price=  productGrid.price
+													else
+															| from
+															.price=  productGrid.price
+
+
+										.product-box__info-list
+											.product-box__info-list__top-wrap
+												.product-box__info-list__image
+													a(href="#")
+														img(src=`images/product/${productGrid.img}` alt="")
+												.product-box__info-list__top
+													h3.product-box__title
+														a(href="#") WebEngage
+
+													.price-b
+														if  productGrid.priceFree
+																span=  productGrid.price
+														else
+																| from 
+																span=  productGrid.price
+
+											.product-box__info-list__middle
+												.product-box__description
+													p
+														| 300 characters Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum convallis viverra.
+														| Aliquam sit amet laoreet erat, non lacinia justo. Vivamus sagittis massa eu ante ultricies fringilla et vel sem. 
+														| Praesent eu pellentesque urna, sit amet suscipit ipsum. Integer ultrices tortor maximus nullam. 
+														a(href="#") Learn more
+											.product-box__info-list__bottom
+												.share
+														.share-label
+															i.icon.icon-share
+															span
+																| Share
+														.share-soc
+															ul.share-soc-list
+																li
+																	a(href="#")
+																		i.icon.fa.fa-twitter
+																li
+																	a(href="#")
+																		i.icon.fa.fa-facebook
+																li
+																	a(href="#")
+																		i.icon.fa.fa-envelope
+
+												ul.product-box__info-list__btns
+													li
+														a(href="#").btn.btn-outline-blue-light.btn-square
+															| Add to Compare
+													li
+														a(href="#").btn.btn-green.btn-square
+															| Visit Website
+											
+						ul.page-navi
+							li.active
+								a(href="#") 1
+							li
+								a(href="#") 2
+							li
+								a(href="#") 3
+							li ...
+							li
+								a(href="#") 10
+
+		//- script.
+		//- 	jQuery(document).ready(function(){
+		//- 	if ( typeof jQuery.cookie == 'function' && jQuery.cookie('gridcookie') == null ) {
+		//- 	jQuery('.products').addClass('grid');
+		//- 	jQuery('.control-bar-view #grid').addClass('active');
+		//- 	}
+		//- 	if( typeof jQuery.cookie == 'function' ){
+		//- 	jQuery('#grid').click(function() {
+		//- 	if( jQuery(this).hasClass('active') ){
+		//- 	return false;
+		//- 	}
+		//- 	jQuery(this).addClass('active');
+		//- 	jQuery('#list').removeClass('active');
+		//- 	jQuery.cookie('gridcookie','grid', { path: '/' });
+		//- 	jQuery('.products').fadeOut(300, function() {
+		//- 	jQuery(this).addClass('grid').removeClass('list').fadeIn(300);
+		//- 	});
+		//- 	return false;
+		//- 	});
+		//- 	jQuery('#list').click(function() {
+		//- 	if( jQuery(this).hasClass('active') ){
+		//- 	return false;
+		//- 	}
+		//- 	jQuery(this).addClass('active');
+		//- 	jQuery('#grid').removeClass('active');
+		//- 	jQuery.cookie('gridcookie','list', { path: '/' });
+		//- 	jQuery('.products').fadeOut(300, function() {
+		//- 	jQuery(this).removeClass('grid').addClass('list').fadeIn(300);
+		//- 	});
+		//- 	return false;
+		//- 	});
+		//- 	if( jQuery.cookie('gridcookie') ){
+		//- 	jQuery('.products, .control-bar-view').addClass(jQuery.cookie('gridcookie'));
+		//- 	}
+		//- 	if( jQuery.cookie('gridcookie') == 'grid' ){
+		//- 	jQuery('.control-bar-view #grid').addClass('active');
+		//- 	jQuery('.control-bar-view #list').removeClass('active');
+		//- 	}
+		//- 	if( jQuery.cookie('gridcookie') == 'list' ){
+		//- 	jQuery('.control-bar-view #list').addClass('active');
+		//- 	jQuery('.control-bar-view #grid').removeClass('active');
+		//- 	}
+		//- 	jQuery('.control-bar-view label').click(function(event) {
+		//- 	event.preventDefault();
+		//- 	});
+		//- 	}
+		//- 	})
+		footer.footer
+			.container
+				.footer__inner
+					.footer__top
+						.row
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Company
+									
+									ul
+										li
+											a(href="#") About Us
+										li
+											a(href="#") How it works
+										li
+											a(href="#") FAQ
+										li
+											a(href="#") Guides
+										li
+											a(href="#") Contact Us
+										li
+											a(href="#") Terms and Conditions
+										li
+											a(href="#") Privacy Policy
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#") Browse
+
+									ul
+										li
+											a(href="#") Social Media
+										li
+											a(href="#") Adwords
+										li
+											a(href="#") SEO
+										li
+											a(href="#") CRO
+										li
+											a(href="#") Funnel
+										li
+											a(href="#") Growth
+										li
+											a(href="#") Ecommerce
+										li
+											a(href="#") Project Management
+										li
+											a(href="#") Analytics
+										li
+											a(href="#") Email Marketing
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Community
+									ul
+										li
+											a(href="#") Why Join DMS?
+										li
+											a(href="#") Advertise with Us
+										li
+											a(href="#") Contact Us
+
+							.col-lg-3
+								.footer-nav
+									h4.footer-nav__title
+										a(href="#")
+											| Explore
+									ul
+										li
+											a(href="#") Digital Marketing Tools
+										li
+											a(href="#") Digital Marketing Services
+										li
+											a(href="#") Digital Marketing Courses
+
+					.footer__bottom
+						.copyright
+							| (c) 2019 Copyright Digital Marketing Supermarket. Made by WOOBRO
+		
+		a(href="#id01" data-fancybox="filter") 1
+		.popup-box#id01
+			.popup-box-head
+				h4 Filter Results
+		include pug/footer    

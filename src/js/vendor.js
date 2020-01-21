@@ -3,3 +3,4 @@
 //= ../libs/jQueryFormStyler/dist/jquery.formstyler.js
 //= ../libs/jquery-equal-height/jquery-equal-height.js
 //= ../libs/slick-1.8.1/slick/slick.js
+//= ../libs/rodiane.js
