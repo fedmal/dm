@@ -14584,8 +14584,38 @@ a {
   bottom: 0;
   right: 0; }
 
-.popup-box {
-  color: red;
-  position: fixed; }
+.filter-fancy .fancybox-bg {
+  background-color: rgba(0, 0, 0, 0.73);
+  opacity: 1; }
+
+.filter-fancy .popup-box {
+  position: relative;
+  color: inherit;
+  max-width: 953px;
+  width: 100%;
+  padding: 0;
+  cursor: auto; }
+
+.filter-fancy .fancybox-close-small {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  right: 10px;
+  top: 10px; }
+  .filter-fancy .fancybox-close-small svg path {
+    fill: #fff; }
+  .filter-fancy .fancybox-close-small svg {
+    width: 100%; }
+
+.popup-box-head {
+  text-align: center;
+  background-color: #0d4af5;
+  color: #fff;
+  padding: 20px 15px; }
+  .popup-box-head h4 {
+    margin: 0; }
+
+.popup-box-content {
+  background-color: #dadbe9; }
 
 /*# sourceMappingURL=main.css.map */

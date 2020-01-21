@@ -13225,8 +13225,11 @@ $.fn.jQueryEqualHeight = function(innerDiv) {
     };
 
 }));
-// $('[data-fancybox="filter"]').fancybox({
-// 	// Options will go here
-// });
+$(function() {
 
-console.log(1)
+	$('[data-fancybox="filter"]').fancybox({
+		baseClass: "filter-fancy"
+	});
+
+
+});

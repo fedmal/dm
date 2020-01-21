@@ -5,7 +5,45 @@
 	bottom: 0;
 	right: 0;
 }
-.popup-box {
-	color: red;
-	position: fixed;
+
+.filter-fancy {
+	.fancybox-bg {
+		background-color: rgba(0,0,0, .73);
+		opacity: 1;
+	}
+
+	.popup-box {
+		position: relative;
+		color: inherit;
+		max-width: 953px;
+		width: 100%;
+		padding: 0;
+		cursor: auto;
+	}
+
+	.fancybox-close-small {
+		width: 40px;
+		height: 40px;
+		padding: 0;
+		right: 10px;
+		top: 10px;
+		svg path{
+			fill: #fff;
+		}
+		svg {
+			width: 100%;
+		}
+	}
+}
+.popup-box-head {
+	text-align: center;
+	background-color: #0d4af5;
+	color: #fff;
+	padding: 20px 15px;
+	h4 {
+		margin: 0;
+	}
+}
+.popup-box-content {
+	background-color: #dadbe9;
 }
